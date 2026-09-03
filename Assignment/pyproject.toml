@@ -1,17 +1,11 @@
 [project]
 name = "assignment"
 version = "0.1.0"
-description = "Add your description here"
+description = "An interactive library system for the Python basics assignment"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "ipykernel>=7.3.0",
-    "matplotlib>=3.11.1",
-    "pandas>=3.0.5",
 ]
-
-[project.scripts]
-assignment = "assignment:main"
 
 [build-system]
 requires = ["uv_build>=0.12.2,<0.13.0"]
