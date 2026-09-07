@@ -8,12 +8,17 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "accelerate>=1.14.0",
     "ipykernel>=7.3.0",
     "matplotlib>=3.11.1",
     "numpy>=2.5.2",
     "pandas>=3.0.5",
     "scikit-learn>=1.9.0",
     "seaborn>=0.13.2",
+    "sentencepiece>=0.2.2",
+    "torch>=2.13.0",
+    "torchvision>=0.28.0",
+    "transformers>=5.16.1",
 ]
 
 [project.scripts]
@@ -22,3 +27,11 @@ dependencies = [
 [build-system]
 requires = ["uv_build>=0.12.2,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
