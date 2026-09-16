@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        ul::before {
+            content: "첫 번째";
+        }
+
+        ul::after {
+            content: '마지막';
+        }
+
+        textarea::placeholder {
+            color: red;
+        }
+
+        .text::selection {
+            background: yellow;
+        }
+    </style>
+    <ul>
+        <li>메뉴1</li>
+        <li>메뉴1</li>
+        <li>메뉴1</li>
+    </ul>
+
+    <textarea placeholder="자기소개를 입력하세요..." rows="5" cols="50"></textarea>
+
+    <div class="text">
+        djfTLrnwjfTLrndifdlffidfddkdldhffhakgkqksdiqkfkalfektlarud
+    </div>
+</body>
+</html>

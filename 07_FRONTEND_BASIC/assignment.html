@@ -3,23 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
     <title>스파르타클럽 수강후기 페이지</title>
+    <style>
+        header {
+            display: flex; /* 자식들을 가로 배치 */
+            justify-content: space-between; /* 양 끝으로 밀어냄 */
+            align-items: center; /* 세로 중앙 정렬 */
+            padding: 10px 40px;
+            background: #fff;
+        }
+
+        header img {
+            height: 30px; /* 로고 크기 조절*/
+            display: block; /*이미지 아래 여백 제거*/
+        }
+
+        nav {
+            color: black;
+            display: flex; /*링크 가로 배치 */
+            gap: 30px; /*링크 사이 산격*/
+            background-color: #fff;
+            font-size: 16px;
+        }
+
+        nav a {
+            color: grey;
+            text-decoration: none; /* 밑줄 제거 */
+            font-size: 15px;
+            background-color: #fff;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            background: gray;   /* 마우스 올릴 때 */
+        }
+        .moment img {
+            width: 100%;
+            height: auto;         /* 비율 자동 계산 */
+            display: block;
+        }
+        
+    <!-- 로고 + 네비게이션 (기존) -->
+
+    </style>
+
+    <!-- Demo styles -->
+    <style>
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #000;
+        font-family:
+        Helvetica Neue,
+        Helvetica,
+        Arial,
+        sans-serif;
+        font-size: 20px;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper {
+        /* width: 100%;
+        height: 100%; */
+        width: 50%;
+        height: 10%;        
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 30px;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    </style>
+<!-- 스와이퍼 헤드-->     
+
 </head>
 <body>
     <header>
-        <a href='https://spartaclub.kr/catalog/scc'><img src="logo.png"></a>
-        <form method="get">
-            검색 부분 정의
-        </form>
-
+        <a href='https://spartaclub.kr/'><img src="logo.png"></a>
         <nav>
-            <a href="#">메뉴1</a>
-            <a href="#">메뉴2</a>
-            <a href="#">메뉴3</a>
-            <a href="#">메뉴4</a>
+            <a href="#">항해</a>
+            <a href="#">기업 교육</a>
+            <a href="#">블로그</a>
+            <a href="#">고객센터</a>
         </nav>
     </header>
+    <header>
+        <nav>
+            <a href="#">전체 강의</a>
+            <a href="#">취업 캠프</a>
+            <a href="#">재직자 캠프</a>
+            <a href="#">커뮤니티</a>
+            <a href="#>수강후기</a>
+            <a href="#">이벤트</a>
+        </nav>
+        <a href="view-source:https://spartaclub.kr/successreview"><img src=login.png></a>
+    </header>
+<!-- 이동 텍스트 등장  -->
 
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">새로운 도전을</div>
+        <div class="swiper-slide">자신감을</div>
+        <div class="swiper-slide">잠재력을</div>
+        <div class="swiper-slide">배움의 즐거움을</div>
+    </div>
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div> -->
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.mySwiper', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        },
+        pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        },
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+    });
+    </script>
+        
+<!-- 이동텍스트 끝 -->
+
+<main>
+    <section class="moment">
+        <img src="image_moment.avif" alt="잠재력을 깨운 순간들">
+    </section>
+</main>
     <main>
         <section>
             <article></article>
@@ -27,10 +171,12 @@
         </section>
     </main>
 
-    <aside>숨김 왼쪽 더보기 메뉴</aside>
+    <!-- <aside>숨김 왼쪽 더보기 메뉴</aside> -->
 
     <footer>
-        사이트 공통 하단
+        <!-- 사이트 공통 하단 -->
     </footer>
+
+    
 </body>
 </html>
