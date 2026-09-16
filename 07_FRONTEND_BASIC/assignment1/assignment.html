@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스파르타클럽 수강후기 페이지</title>
+    <style>
+
+        .slider1 {
+            width: min(720px, 100%);
+            aspect-ratio 1971 / 294;
+            overflow: hidden;
+        }
+
+        .track {
+            display: flex;
+            width: 500%;
+            height: 100%;
+            animation: roll 8s infinite;
+        }
+
+        
+        .slide1 {
+            width: auto;
+            height: 100%;
+        }
+        .slide1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /*비율 다른게 여기서 채워짐, 잘리지 않음*/
+            display: block;
+        }
+
+
+        .slider {
+            width: min(720px, 100%);
+            margin: 0 auto;
+            aspect-ratio 41 / 20;
+            overflow: hidden;
+            border-radius: 16px;
+        }
+
+        .track {
+            display: flex;
+            width: 500%;
+            height: 100%;
+            animation: roll 8s infinite;
+        }
+
+        
+        .slide {
+            width: 20%;
+            height: 100%;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /*비율 다른게 여기서 채워짐, 잘리지 않음*/
+            display: block;
+        }
+        /* .stop_text {
+            width: min(720px, 100%)
+        } */
+        
+        @keyframes roll {
+        0%,  16% { transform: translateX(0); }
+        21%,  37% { transform: translateX(-20%); }
+        42%,  58% { transform: translateX(-40%); }
+        63%,  79% { transform: translateX(-60%); }
+        84%,  100% { transform: translateX(-80%); } 
+        }
+
+        header {
+            display: flex; /* 자식들을 가로 배치 */
+            justify-content: space-between; /* 양 끝으로 밀어냄 */
+            align-items: center; /* 세로 중앙 정렬 */
+            padding: 10px 40px;
+            background: #fff;
+        }
+
+        header img {
+            height: 30px; /* 로고 크기 조절*/
+            display: block; /*이미지 아래 여백 제거*/
+        }
+
+        nav {
+            color: black;
+            display: flex; /*링크 가로 배치 */
+            gap: 30px; /*링크 사이 산격*/
+            background-color: #fff;
+            font-size: 16px;
+        }
+
+        nav a {
+            color: grey;
+            text-decoration: none; /* 밑줄 제거 */
+            font-size: 15px;
+            background-color: #fff;
+            font-size: 16px;
+        }
+
+        nav a:hover {/* 마우스 올릴 때 */
+            background: rgba(128, 128, 128, 0.95);
+            border-radius: 4px;
+            transition: all 0.2s ease-in-out   
+        }
+        .moment img {
+            width: 100%;
+            height: auto;         /* 비율 자동 계산 */
+            display: block;
+        }
+        
+    <!-- 로고 + 네비게이션 (기존) -->
+
+    </style>
+
+    <!-- Demo styles -->
+    <style>
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #000;
+        font-family:
+        Helvetica Neue,
+        Helvetica,
+        Arial,
+        sans-serif;
+        font-size: 20px;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper {
+        /* width: 100%;
+        height: 100%; */
+        width: 50%;
+        height: 10%;        
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 30px;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    </style>
+<!-- 스와이퍼 헤드-->     
+
+</head>
+<body>
+    <header>
+        <a href='https://spartaclub.kr/'><img src="logo.png"></a>
+        <nav a>
+            <a href="#">항해</a>
+            <a href="#">기업 교육</a>
+            <a href="#">블로그</a>
+            <a href="#">고객센터</a>
+        </nav a>
+    </header>
+    <header>
+        <nav>
+            <a href="#">전체 강의</a>
+            <a href="#">취업 캠프</a>
+            <a href="#">재직자 캠프</a>
+            <a href="#">커뮤니티</a>
+            <a href="#" style="color: #ee0a3d;">수강후기</a>
+            <a href="#">이벤트</a>
+        </nav>
+        <a href="view-source:https://spartaclub.kr/successreview"><img src=login.png></a>
+    </header>
+    <div class="slider1">
+        <div class="track">
+            <div class="slide1"><img src="images/text1.png" alt="텍스트사진1"/></div>
+            <div class="slide1"><img src="images/text2.png" alt="텍스트사진2"/></div>
+            <div class="slide1"><img src="images/text3.png" alt="텍스트사진3"/></div>
+            <div class="slide1"><img src="images/text4.png" alt="텍스트사진4"/></div>
+            <div class="slide1" aria-hidden="true"><img src="images/text1.png" alt="사진1"/></div>
+        </div>
+    </div>
+<div>
+    <section class="moment">
+        <img src="images/Kaeun_sungan.png" alt="text0">
+    </section>
+</div>
+    <div class="slider">
+        <div class="track">
+            <div class="slide"><img src="images/people1.png" alt="사진1"/></div>
+            <div class="slide"><img src="images/people2.png" alt="사진2"/></div>
+            <div class="slide"><img src="images/people3.png" alt="사진3"/></div>
+            <div class="slide"><img src="images/people4.png" alt="사진4"/></div>
+            <div class="slide" aria-hidden="true"><img src="images/people1.png" alt="사진1"/></div>
+        </div>
+    </div>
+
+
+    <main>
+        <section>
+            <article></article>
+            <article></article>
+        </section>
+    </main>
+
+    <!-- <aside>숨김 왼쪽 더보기 메뉴</aside> -->
+
+    <footer>
+        <!-- 사이트 공통 하단 -->
+    </footer>
+
+    
+</body>
+</html>
