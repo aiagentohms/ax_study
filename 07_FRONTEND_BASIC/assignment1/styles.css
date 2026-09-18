@@ -6,7 +6,7 @@
             margin: 0;
         }
 
-        /* [1] 헤더
+        /* 헤더
         흰 배경은 화면 끝까지 한 덩어리, 그 안에 두 줄(.row)이 들어감.
         배경 블록을 두 개로 나누면 경계선이 생김. */
         .header {
@@ -22,6 +22,7 @@
             padding: 0 40px;
         }
 
+        /* 전체 강의 취업 캠프 재직자 캠프 커뮤니티 수강후기 이벤트 */
         .links-main {
             color: #555;
             text-decoration: none;  /* 밑줄 제거 */
@@ -31,10 +32,20 @@
             transition: background 0.2s ease-in-out;
         }
 
-        .links-main a:hover {
-            background: rgba(0, 0, 0, 0.06);
-        }            
+        /* 패딩 넣어서 hover 크기 조절 */
+        .links-main a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
 
+        /* hover 색기입 */
+        .links-main a:hover {
+            background-color: rgba(0, 0, 0, 0.03);
+        }            
+        /*  */
         .row {
             display: flex;                  /* ★ 가로 배치 */
             justify-content: space-between; /* 첫 자식 왼쪽 끝, 마지막 자식 오른쪽 끝 */
